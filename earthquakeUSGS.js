@@ -15,47 +15,47 @@
         }, {
             id: "positive",
             alias: "positive",
-            dataType: tableau.dataTypeEnum.float
+            dataType: tableau.dataTypeEnum.string
         }, {
             id: "negative",
 			alias: "negative",
-            dataType: tableau.dataTypeEnum.float
+            dataType: tableau.dataTypeEnum.string
         }, {
             id: "pending",
 			alias:"pending",
-            dataType: tableau.dataTypeEnum.float
+            dataType: tableau.dataTypeEnum.string
         }, {
             id: "hospitalizedCurrently",
 			alias: "hospitalizedCurrently",
-            dataType: tableau.dataTypeEnum.float
+            dataType: tableau.dataTypeEnum.string
         }, {
             id: "hospitalizedCumulative",
 			alias: "hospitalizedCumulative",
-            dataType: tableau.dataTypeEnum.float
+            dataType: tableau.dataTypeEnum.string
         }, {
             id: "inIcuCurrently",
 			alias: "inIcuCurrently",
-            dataType: tableau.dataTypeEnum.float
+            dataType: tableau.dataTypeEnum.string
         }, {
         }, {
             id: "inIcuCumulative",
 			alias: "inIcuCumulative",
-            dataType: tableau.dataTypeEnum.float
+            dataType: tableau.dataTypeEnum.string
         }, {	
         }, {
             id: "onVentilatorCurrently",
 			alias: "onVentilatorCurrently",
-            dataType: tableau.dataTypeEnum.float
+            dataType: tableau.dataTypeEnum.string
         }, {
         }, {
             id: "onVentilatorCumulative",
 			alias: "onVentilatorCumulative",
-            dataType: tableau.dataTypeEnum.float
+            dataType: tableau.dataTypeEnum.string
         }, {
         }, {
             id: "recovered",
 			alias: "recovered",
-            dataType: tableau.dataTypeEnum.float
+            dataType: tableau.dataTypeEnum.string
         }, {
         }, {
             id: "dataQualityGrade",
@@ -80,12 +80,12 @@
         }, {
             id: "death",
 			alias: "death",
-            dataType: tableau.dataTypeEnum.float
+            dataType: tableau.dataTypeEnum.string
         }, {
         }, {
             id: "hospitalized",
 			alias: "hospitalized",
-            dataType: tableau.dataTypeEnum.float
+            dataType: tableau.dataTypeEnum.string
         }, {
         }, {
             id: "dateChecked",
@@ -95,133 +95,133 @@
         }, {
             id: "totalTestsViral",
 			alias: "totalTestsViral",
-            dataType: tableau.dataTypeEnum.float
+            dataType: tableau.dataTypeEnum.string
         }, {
         }, {
             id: "positiveTestsViral",
 			alias: "positiveTestsViral",
-            dataType: tableau.dataTypeEnum.float
+            dataType: tableau.dataTypeEnum.string
         }, {
         }, {
             id: "negativeTestsViral",
 			alias: "negativeTestsViral",
-            dataType: tableau.dataTypeEnum.float
+            dataType: tableau.dataTypeEnum.string
         }, {
         }, {
             id: "positiveCasesViral",
 			alias: "positiveCasesViral",
-            dataType: tableau.dataTypeEnum.float
+            dataType: tableau.dataTypeEnum.string
         }, {
         }, {
             id: "deathConfirmed",
 			alias: "deathConfirmed",
-            dataType: tableau.dataTypeEnum.float
+            dataType: tableau.dataTypeEnum.string
         }, {
         }, {
             id: "deathProbable",
 			alias: "deathProbable",
-            dataType: tableau.dataTypeEnum.float
+            dataType: tableau.dataTypeEnum.string
         }, {
         }, {
             id: "totalTestEncountersViral",
 			alias: "totalTestEncountersViral",
-            dataType: tableau.dataTypeEnum.float
+            dataType: tableau.dataTypeEnum.string
         }, {
         }, {
             id: "totalTestsPeopleViral",
 			alias: "totalTestsPeopleViral",
-            dataType: tableau.dataTypeEnum.float
+            dataType: tableau.dataTypeEnum.string
         }, {
         }, {
             id: "totalTestsAntibody",
 			alias: "totalTestsAntibody",
-            dataType: tableau.dataTypeEnum.float
+            dataType: tableau.dataTypeEnum.string
         }, {
         }, {
             id: "positiveTestsAntibody",
 			alias: "positiveTestsAntibody",
-            dataType: tableau.dataTypeEnum.float
+            dataType: tableau.dataTypeEnum.string
         }, {
 
         }, {
             id: "negativeTestsAntibody",
 			alias: "negativeTestsAntibody",
-            dataType: tableau.dataTypeEnum.float
+            dataType: tableau.dataTypeEnum.string
         }, {
         }, {
             id: "totalTestsPeopleAntibody",
 			alias: "totalTestsPeopleAntibody",
-            dataType: tableau.dataTypeEnum.float
+            dataType: tableau.dataTypeEnum.string
         }, {
         }, {
             id: "positiveTestsPeopleAntibody",
 			alias: "positiveTestsPeopleAntibody",
-            dataType: tableau.dataTypeEnum.float
+            dataType: tableau.dataTypeEnum.string
         }, {
         }, {
             id: "negativeTestsPeopleAntibody",
 			alias: "negativeTestsPeopleAntibody",
-            dataType: tableau.dataTypeEnum.float
+            dataType: tableau.dataTypeEnum.string
         }, {
         }, {
             id: "totalTestsPeopleAntigen",
 			alias: "totalTestsPeopleAntigen",
-            dataType: tableau.dataTypeEnum.float
+            dataType: tableau.dataTypeEnum.string
         }, {
         }, {
             id: "totalTestsPeopleAntigen",
 			alias: "totalTestsPeopleAntigen",
-            dataType: tableau.dataTypeEnum.float
+            dataType: tableau.dataTypeEnum.string
         }, {
         }, {
             id: "positiveTestsAntigen",
 			alias: "positiveTestsAntigen",
-            dataType: tableau.dataTypeEnum.float
+            dataType: tableau.dataTypeEnum.string
         }, {
         }, {
             id: "fips",
 			alias: "fips",
-            dataType: tableau.dataTypeEnum.float
+            dataType: tableau.dataTypeEnum.string
         }, {	
         }, {
             id: "positiveIncrease",
 			alias: "positiveIncrease",
-            dataType: tableau.dataTypeEnum.float
+            dataType: tableau.dataTypeEnum.string
         }, {
         }, {
             id: "positiveIncrease",
 			alias: "positiveIncrease",
-            dataType: tableau.dataTypeEnum.float
+            dataType: tableau.dataTypeEnum.string
         }, {
         }, {
             id: "total",
 			alias: "total",
-            dataType: tableau.dataTypeEnum.float
+            dataType: tableau.dataTypeEnum.string
         }, {
         }, {
             id: "totalTestResults",
 			alias: "totalTestResults",
-            dataType: tableau.dataTypeEnum.float
+            dataType: tableau.dataTypeEnum.string
         }, {
         }, {
             id: "totalTestResultsIncrease",
 			alias: "totalTestResultsIncrease",
-            dataType: tableau.dataTypeEnum.float
+            dataType: tableau.dataTypeEnum.string
         }, {
         }, {
             id: "posNeg",
 			alias: "posNeg",
-            dataType: tableau.dataTypeEnum.float
+            dataType: tableau.dataTypeEnum.string
         }, {
         }, {
             id: "deathIncrease",
 			alias: "deathIncrease",
-            dataType: tableau.dataTypeEnum.float
+            dataType: tableau.dataTypeEnum.string
         }, {
         }, {
             id: "hospitalizedIncrease",
 			alias: "hospitalizedIncrease",
-            dataType: tableau.dataTypeEnum.float
+            dataType: tableau.dataTypeEnum.string
         }, {
         }, {
             id: "hash",
@@ -231,32 +231,32 @@
         }, {
             id: "commercialScore",
 			alias: "commercialScore",
-            dataType: tableau.dataTypeEnum.float
+            dataType: tableau.dataTypeEnum.string
         }, {
         }, {
             id: "negativeRegularScore",
 			alias: "negativeRegularScore",
-            dataType: tableau.dataTypeEnum.float
+            dataType: tableau.dataTypeEnum.string
         }, {
         }, {
             id: "negativeScore",
 			alias: "negativeScore",
-            dataType: tableau.dataTypeEnum.float
+            dataType: tableau.dataTypeEnum.string
         }, {
         }, {
             id: "positiveScore",
 			alias: "positiveScore",
-            dataType: tableau.dataTypeEnum.float
+            dataType: tableau.dataTypeEnum.string
         }, {
         }, {
             id: "score",
 			alias: "score",
-            dataType: tableau.dataTypeEnum.float
+            dataType: tableau.dataTypeEnum.string
         }, {
         }, {
             id: "grade",
 			alias: "grade",
-            dataType: tableau.dataTypeEnum.float
+            dataType: tableau.dataTypeEnum.string
         }, {			
 		}];
         var tableSchema = {
