@@ -29,7 +29,7 @@
         $.getJSON("https://api.covidtracking.com/v1/states/daily.json", function(resp) {
 		
             var feat = resp.features,
-				console.log(feat);
+			
                 tableData = [];
 
             // Iterate over the JSON object
