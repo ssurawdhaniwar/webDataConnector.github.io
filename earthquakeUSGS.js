@@ -259,9 +259,9 @@
             dataType: tableau.dataTypeEnum.string
         }, {			
 		}];
-        var tableSchema = {
-            id: "COVIDTacking",
-            alias: "COVIDTacking_Data",
+		var tableSchema = {
+            id: "earthquakeFeed",
+            alias: "Earthquakes with magnitude greater than 4.5 in the last seven days",
             columns: cols
         };
 
