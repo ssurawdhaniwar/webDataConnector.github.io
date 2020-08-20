@@ -28,12 +28,13 @@
     myConnector.getData = function(table, doneCallback) {
         $.getJSON("https://api.covidtracking.com/v1/states/daily.json", function(resp) {
             var feat = resp.features,
+		
                 tableData = [];
 
             // Iterate over the JSON object
             for (var i = 0, len = feat.length; i < len; i++) {
                 tableData.push({
-                    "date": feat[i].properties.date,
+                    "date": feat[i]["Month"]["Year"],
                     "state": feat[i].properties.state
                     		
 	              });
