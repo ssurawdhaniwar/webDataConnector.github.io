@@ -5,24 +5,37 @@
     // Define the schema
     myConnector.getSchema = function(schemaCallback) {
         var cols = [{
-            id: "id",
+            id: "date",
             dataType: tableau.dataTypeEnum.string
         }, {
-            id: "mag",
-            alias: "magnitude",
+            id: "state",
+            alias: "state",
+            dataType: tableau.dataTypeEnum.string
+        }, {
+            id: "positive",
+            alias: "positive",
             dataType: tableau.dataTypeEnum.float
         }, {
-            id: "title",
-            alias: "title",
-            dataType: tableau.dataTypeEnum.string
+            id: "negative",
+			alias: "negative",
+            dataType: tableau.dataTypeEnum.float
         }, {
-            id: "location",
-            dataType: tableau.dataTypeEnum.geometry
+            id: "pending",
+			alias:"pending",
+            dataType: tableau.dataTypeEnum.float
+        }, {
+            id: "hospitalizedCurrently",
+			alias: "hospitalizedCurrently",
+            dataType: tableau.dataTypeEnum.float
+        }, {
+            id: "inIcuCurrently",
+			alias: "inIcuCurrently",
+            dataType: tableau.dataTypeEnum.float
         }];
 
         var tableSchema = {
-            id: "earthquakeFeed",
-            alias: "Earthquakes with magnitude greater than 4.5 in the last seven days",
+            id: "COVIDTacking",
+            alias: "COVIDTacking_Data",
             columns: cols
         };
 
@@ -31,17 +44,21 @@
 
     // Download the data
     myConnector.getData = function(table, doneCallback) {
-        $.getJSON("https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/4.5_week.geojson", function(resp) {
+        $.getJSON("https://api.covidtracking.com/v1/states/daily.json", function(resp) {
             var feat = resp.features,
                 tableData = [];
 
             // Iterate over the JSON object
             for (var i = 0, len = feat.length; i < len; i++) {
                 tableData.push({
-                    "id": feat[i].id,
-                    "mag": feat[i].properties.mag,
-                    "title": feat[i].properties.title,
-                    "location": feat[i].geometry
+                    "date": feat[i].properties.date,
+                    "state": feat[i].properties.state,
+                    "positive": feat[i].properties.positive,
+                    "negative": feat[i].properties.negative,
+					"pending": feat[i].properties.pending,
+					"hospitalizedCurrently": feat[i].properties.hospitalizedCurrently,
+					"inIcuCurrently": feat[i].properties.inIcuCurrently
+					
                 });
             }
 
