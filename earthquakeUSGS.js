@@ -333,7 +333,7 @@
 					"negativeScore": feat[i].properties.negativeScore,
 					"positiveScore": feat[i].properties.positiveScore,
 					"score": feat[i].properties.score,
-					"grade": feat[i].properties.grade,			
+					"grade": feat[i].properties.grade			
 	              });
             }
 
