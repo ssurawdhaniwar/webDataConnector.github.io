@@ -31,7 +31,7 @@
             id: "hospitalizedCumulative",
 			alias: "hospitalizedCumulative",
             dataType: tableau.dataTypeEnum.float
-                }, {
+        }, {
             id: "inIcuCurrently",
 			alias: "inIcuCurrently",
             dataType: tableau.dataTypeEnum.float
@@ -49,11 +49,6 @@
         }, {
             id: "onVentilatorCumulative",
 			alias: "onVentilatorCumulative",
-            dataType: tableau.dataTypeEnum.float
-        }, {
-        }, {
-            id: "recovered",
-			alias: "recovered",
             dataType: tableau.dataTypeEnum.float
         }, {
         }, {
