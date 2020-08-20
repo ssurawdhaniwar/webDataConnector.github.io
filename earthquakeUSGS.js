@@ -298,43 +298,42 @@
 					"dateModified": feat[i].properties.dateModified,
 					"checkTimeEt": feat[i].properties.checkTimeEt,
 					"death": feat[i].properties.death,
-					"hospitalized": feat[i].properties.hospitalized
-					"dateChecked": feat[i].properties.dateChecked
-					"totalTestsViral": feat[i].properties.totalTestsViral
-					"positiveTestsViral": feat[i].properties.positiveTestsViral
-					"negativeTestsViral": feat[i].properties.negativeTestsViral
-					"positiveCasesViral": feat[i].properties.positiveCasesViral
-					"deathConfirmed": feat[i].properties.deathConfirmed
-					"deathProbable": feat[i].properties.deathProbable
-					"totalTestEncountersViral": feat[i].properties.totalTestEncountersViral
-					"totalTestsPeopleViral": feat[i].properties.totalTestsPeopleViral
-					"totalTestsAntibody": feat[i].properties.totalTestsAntibody
-					"positiveTestsAntibody": feat[i].properties.positiveTestsAntibody
-					"negativeTestsAntibody": feat[i].properties.negativeTestsAntibody
-					"totalTestsPeopleAntibody": feat[i].properties.totalTestsPeopleAntibody
-					"positiveTestsPeopleAntibody": feat[i].properties.positiveTestsPeopleAntibody
-					"negativeTestsPeopleAntibody": feat[i].properties.negativeTestsPeopleAntibody
-					"totalTestsPeopleAntigen": feat[i].properties.totalTestsPeopleAntigen
-					"positiveTestsPeopleAntigen": feat[i].properties.positiveTestsPeopleAntigen
-					"totalTestsAntigen": feat[i].properties.totalTestsAntigen
-					"positiveTestsAntigen": feat[i].properties.positiveTestsAntigen
-					"fips": feat[i].properties.fips
-					"positiveIncrease": feat[i].properties.positiveIncrease
-					"negativeIncrease": feat[i].properties.negativeIncrease
-					"total": feat[i].properties.total
-					"totalTestResults": feat[i].properties.totalTestResults
-					"totalTestResultsIncrease": feat[i].properties.totalTestResultsIncrease
-					"posNeg": feat[i].properties.posNeg
-					"deathIncrease": feat[i].properties.deathIncrease
-					"hospitalizedIncrease": feat[i].properties.hospitalizedIncrease
-					"hash": feat[i].properties.hash
-					"commercialScore": feat[i].properties.commercialScore
-					"negativeRegularScore": feat[i].properties.negativeRegularScore
-					"negativeScore": feat[i].properties.negativeScore
-					"positiveScore": feat[i].properties.positiveScore
-					"score": feat[i].properties.score
-					"grade": feat[i].properties.grade
-					
+					"hospitalized": feat[i].properties.hospitalized,
+					"dateChecked": feat[i].properties.dateChecked,
+					"totalTestsViral": feat[i].properties.totalTestsViral,
+					"positiveTestsViral": feat[i].properties.positiveTestsViral,
+					"negativeTestsViral": feat[i].properties.negativeTestsViral,
+					"positiveCasesViral": feat[i].properties.positiveCasesViral,
+					"deathConfirmed": feat[i].properties.deathConfirmed,
+					"deathProbable": feat[i].properties.deathProbable,
+					"totalTestEncountersViral": feat[i].properties.totalTestEncountersViral,
+					"totalTestsPeopleViral": feat[i].properties.totalTestsPeopleViral,
+					"totalTestsAntibody": feat[i].properties.totalTestsAntibody,
+					"positiveTestsAntibody": feat[i].properties.positiveTestsAntibody,
+					"negativeTestsAntibody": feat[i].properties.negativeTestsAntibody,
+					"totalTestsPeopleAntibody": feat[i].properties.totalTestsPeopleAntibody,
+					"positiveTestsPeopleAntibody": feat[i].properties.positiveTestsPeopleAntibody,
+					"negativeTestsPeopleAntibody": feat[i].properties.negativeTestsPeopleAntibody,
+					"totalTestsPeopleAntigen": feat[i].properties.totalTestsPeopleAntigen,
+					"positiveTestsPeopleAntigen": feat[i].properties.positiveTestsPeopleAntigen,
+					"totalTestsAntigen": feat[i].properties.totalTestsAntigen,
+					"positiveTestsAntigen": feat[i].properties.positiveTestsAntigen,
+					"fips": feat[i].properties.fips,
+					"positiveIncrease": feat[i].properties.positiveIncrease,
+					"negativeIncrease": feat[i].properties.negativeIncrease,
+					"total": feat[i].properties.total,
+					"totalTestResults": feat[i].properties.totalTestResults,
+					"totalTestResultsIncrease": feat[i].properties.totalTestResultsIncrease,
+					"posNeg": feat[i].properties.posNeg,
+					"deathIncrease": feat[i].properties.deathIncrease,
+					"hospitalizedIncrease": feat[i].properties.hospitalizedIncrease,
+					"hash": feat[i].properties.hash,
+					"commercialScore": feat[i].properties.commercialScore,
+					"negativeRegularScore": feat[i].properties.negativeRegularScore,
+					"negativeScore": feat[i].properties.negativeScore,
+					"positiveScore": feat[i].properties.positiveScore,
+					"score": feat[i].properties.score,
+					"grade": feat[i].properties.grade,			
 	              });
             }
 
