@@ -50,7 +50,7 @@
         }  
       
         var tableData = [];  
-        var url = "https://api.covidtracking.com/v1/us/current.json";  
+        var url = "https://covidtracking.com/api/v1/states/daily.json";  
         getAllData(url);  
          
       }; 
