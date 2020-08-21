@@ -12,18 +12,7 @@
             id: "state",
             alias: "state",
             dataType: tableau.dataTypeEnum.string
-        }, {
-            id: "positive",
-            alias: "positive",
-            dataType: tableau.dataTypeEnum.string
-        }, {
-            id: "negative",
-			alias: "negative",
-            dataType: tableau.dataTypeEnum.string
-        }, {
-            id: "pending",
-			alias:"pending",
-            dataType: tableau.dataTypeEnum.string
+
         }];
 
         schemaCallback([tableSchema]);
@@ -39,10 +28,7 @@
             for (var i = 0, len = feat.length; i < len; i++) {
                 tableData.push({
 					"date": feat[i].date,
-                    "state": feat[i].state,
-                    "positive": feat[i].positive,
-                    "negative": feat[i].negative,
-					"pending": feat[i].pending
+                    "state": feat[i].state
 			
                 });
             }
