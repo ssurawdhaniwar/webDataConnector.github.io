@@ -51,8 +51,8 @@
       
         var tableData = [];  
         var url = "https://api.covidtracking.com/v1/states/daily.json";  
-        getAllData(url);  
-          
+        var a= getAllData(url);  
+        console.log(a)  
       }; 
 
     //4: *************************
