@@ -31,8 +31,9 @@
               next = resp.next;  
       
             // Interagindo no objeto JSON  
-      
+            alert('I am here');
             for (var i = 1, len = feat.length; i < len; i++) {  
+			 alert('Inside the for loop');
               tableData.push({  
                 "date": feat[i].date,
                 "state": feat[i].state 
