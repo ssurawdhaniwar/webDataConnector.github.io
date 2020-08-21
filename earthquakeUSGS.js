@@ -1,57 +1,69 @@
+
 (function() {
-    // Create the connector object
+    //1: *************************
+    // Criação do objeto da conexão
     var myConnector = tableau.makeConnector();
 
-    // Define the schema
+    //2: *************************
+    // Definição do esquema
     myConnector.getSchema = function(schemaCallback) {
-        var cols = [{
-            id: "date",
-			alias: "date",
-            dataType: tableau.dataTypeEnum.string
-        }, {
-            id: "state",
-            alias: "state",
-            dataType: tableau.dataTypeEnum.string
-        }];
+        var cols = [
+            {id:"date", alias: "date", dataType: tableau.dataTypeEnum.string},
+            {id:"state", alias: "state", dataType: tableau.dataTypeEnum.string}
+        ];
 
-        
-		var tableSchema = {
-            id: "earthquakeFeed",
-            alias: "Earthquakes with magnitude greater than 4.5 in the last seven days",
+        //Definicao da Tabela
+        var tableSchema = {
+            id: "Covid_19",
+            alias: "Casos-19",
             columns: cols
         };
 
         schemaCallback([tableSchema]);
     };
 
-    // Download the data
-    myConnector.getData = function(table, doneCallback) {
-        $.getJSON("https://api.covidtracking.com/v1/states/daily.json", function(resp) {
-		var feat = resp.features,
-			len = feat.length
-                tableData = [];
+    //3: *************************
+    // Obtencão dos dados
+    myConnector.getData = function(table, doneCallback) {  
+        function getAllData(url) {  
+          $.getJSON(url, function(resp) {  
+            var feat = resp.results,  
+              next = resp.next;  
+      
+            // Interagindo no objeto JSON  
+      
+            for (var i = 1, len = feat.length; i < len; i++) {  
+              tableData.push({  
+                "date": feat[i].date,
+                "state": feat[i].state 
+              });  
+            }  
+            // Interagindo entre todas as paginas, para isso fazemos a variavel next = resp.next; para pegar proxima pagina com dados , se nao encontrar mais dados vai ser null
+            // https://community.tableau.com/thread/335501 contribuição da Keshia Rose
+            if (next !== null) {  
+              getAllData(next);  
+            } else {  
+              table.appendRows(tableData);  
+              doneCallback();  
+            }  
+          });  
+        }  
+      
+        var tableData = [];  
+        var url = "https://api.covidtracking.com/v1/states/daily.json";  
+        getAllData(url);  
+          
+      }; 
 
-            // Iterate over the JSON object
-            for (var i = 0; i < len; i++) {
-                tableData.push({
-                    "date": feat[i].properties.date,
-                    "state": feat[i].properties.state
-                    		
-	              });
-            }
-
-            table.appendRows(tableData);
-            doneCallback();
-        });
-    };
-
+    //4: *************************
     tableau.registerConnector(myConnector);
 
-    // Create event listeners for when the user submits the form
+    //5: *************************
+    // Criação do evento que fica escutando quando o usuário clica no botão da pagina HTML
     $(document).ready(function() {
         $("#submitButton").click(function() {
-            tableau.connectionName = "COVID Tracking Feed"; // This will be the data source name in Tableau
-            tableau.submit(); // This sends the connector object to Tableau
+            tableau.connectionName = "Casos do coronavírus por município por dia"; // Este texto vai ser o nome na fonte de dados no Tableau
+            tableau.submit(); // Este comando envia o objeto conexão criado no inicio para o Tableau
         });
     });
 })();
