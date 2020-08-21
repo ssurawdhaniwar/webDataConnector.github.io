@@ -1,70 +1,62 @@
-
 (function() {
-    //1: *************************
-    // Criação do objeto da conexão
+    // Create the connector object
     var myConnector = tableau.makeConnector();
 
-    //2: *************************
-    // Definição do esquema
+    // Define the schema
     myConnector.getSchema = function(schemaCallback) {
-        var cols = [
-            {id:"date", alias: "date", dataType: tableau.dataTypeEnum.string},
-            {id:"state", alias: "state", dataType: tableau.dataTypeEnum.string}
-        ];
+        var cols = [{
+            id: "id",
+            dataType: tableau.dataTypeEnum.string
+        }, {
+            id: "mag",
+            alias: "magnitude",
+            dataType: tableau.dataTypeEnum.float
+        }, {
+            id: "title",
+            alias: "title",
+            dataType: tableau.dataTypeEnum.string
+        }, {
+            id: "location",
+            dataType: tableau.dataTypeEnum.geometry
+        }];
 
-        //Definicao da Tabela
         var tableSchema = {
-            id: "Covid_19",
-            alias: "Casos-19",
+            id: "earthquakeFeed",
+            alias: "Earthquakes with magnitude greater than 4.5 in the last seven days",
             columns: cols
         };
 
         schemaCallback([tableSchema]);
     };
 
-    //3: *************************
-    // Obtencão dos dados
-    myConnector.getData = function(table, doneCallback) {  
-        function getAllData(url) {  
-          $.getJSON(url, function(resp) {  
-            var feat = resp.results,  
-              next = resp.next;  
-      
-            // Interagindo no objeto JSON  
-            alert('I am here');
-            for (var i = 1, len = feat.length; i < len; i++) {  
-			 alert('Inside the for loop');
-              tableData.push({  
-                "date": feat[i].date,
-                "state": feat[i].state 
-              });  
-            }  
-            // Interagindo entre todas as paginas, para isso fazemos a variavel next = resp.next; para pegar proxima pagina com dados , se nao encontrar mais dados vai ser null
-            // https://community.tableau.com/thread/335501 contribuição da Keshia Rose
-            if (next !== null) {  
-              getAllData(next);  
-            } else {  
-              table.appendRows(tableData);  
-              doneCallback();  
-            }  
-          });  
-        }  
-      
-        var tableData = [];  
-        var url = "https://covidtracking.com/api/v1/states/daily.json";  
-        getAllData(url);  
-         
-      }; 
+    // Download the data
+    myConnector.getData = function(table, doneCallback) {
+        $.getJSON("https://covidtracking.com/api/v1/states/daily.json", function(resp) {
+            var feat = resp.features,
+                tableData = [];
 
-    //4: *************************
+            // Iterate over the JSON object
+            for (var i = 0, len = feat.length; i < len; i++) {
+                tableData.push({
+                    "id": feat[i].id,
+                    "mag": feat[i].properties.mag,
+                    "title": feat[i].properties.title,
+                    "location": feat[i].geometry
+                });
+            }
+
+            table.appendRows(tableData);
+            doneCallback();
+        });
+    };
+
     tableau.registerConnector(myConnector);
 
-    //5: *************************
-    // Criação do evento que fica escutando quando o usuário clica no botão da pagina HTML
+    // Create event listeners for when the user submits the form
     $(document).ready(function() {
         $("#submitButton").click(function() {
-            tableau.connectionName = "Casos do coronavírus por município por dia"; // Este texto vai ser o nome na fonte de dados no Tableau
-            tableau.submit(); // Este comando envia o objeto conexão criado no inicio para o Tableau
+            tableau.connectionName = "USGS Earthquake Feed"; // This will be the data source name in Tableau
+            tableau.submit(); // This sends the connector object to Tableau
         });
     });
 })();
