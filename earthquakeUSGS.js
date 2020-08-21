@@ -50,7 +50,7 @@
         }  
       
         var tableData = [];  
-        var url = "https://covidtracking.com/api/v1/states/daily.json";  
+        var url = "https://brasil.io/api/dataset/covid19/caso/data?page=1";  
         getAllData(url);  
          
       }; 
