@@ -20,7 +20,7 @@
 
     // Download the data
     myConnector.getData = function(table, doneCallback) {
-        $.getJSON("https://covidtracking.com/api/v1/us/current.csv", function(resp) {
+        $.getJSON("http://covidtracking.com/api/v1/us/current.csv", function(resp) {
             var feat = resp,
                 tableData = [];
 
