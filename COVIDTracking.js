@@ -343,6 +343,7 @@
 
     tableau.registerConnector(myConnector);
 
+
     // Create event listeners for when the user submits the form
     $(document).ready(function() {
         $("#submitButton").click(function() {
