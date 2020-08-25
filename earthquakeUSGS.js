@@ -187,8 +187,8 @@
 			alias: "positiveIncrease",
             dataType: tableau.dataTypeEnum.string
         }, {
-            id: "positiveIncrease",
-			alias: "positiveIncrease",
+            id: "negativeIncrease",
+			alias: "negativeIncrease",
             dataType: tableau.dataTypeEnum.string
         }, {
             id: "total",
