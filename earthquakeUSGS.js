@@ -5,19 +5,13 @@
     // Define the schema
     myConnector.getSchema = function(schemaCallback) {
         var cols = [{
-            id: "id",
+            id: "date",
             dataType: tableau.dataTypeEnum.string
         }, {
-            id: "mag",
-            alias: "magnitude",
-            dataType: tableau.dataTypeEnum.float
-        }, {
-            id: "title",
-            alias: "title",
+            id: "state",
+            alias: "state",
             dataType: tableau.dataTypeEnum.string
-        }, {
-            id: "location",
-            dataType: tableau.dataTypeEnum.geometry
+   
         }];
 
         var tableSchema = {
@@ -31,17 +25,15 @@
 
     // Download the data
     myConnector.getData = function(table, doneCallback) {
-        $.getJSON("https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/4.5_week.geojson", function(resp) {
-            var feat = resp.features,
+        $.getJSON("https://api.covidtracking.com/v1/states/daily.json", function(resp) {
+            var feat = resp,
                 tableData = [];
 
             // Iterate over the JSON object
             for (var i = 0, len = feat.length; i < len; i++) {
                 tableData.push({
-                    "id": feat[i].id,
-                    "mag": feat[i].properties.mag,
-                    "title": feat[i].properties.title,
-                    "location": feat[i].geometry
+                    "date": feat[i].date,
+                    "state": feat[i].state
                 });
             }
 
