@@ -263,8 +263,8 @@
 		}];
 
         var tableSchema = {
-            id: "COVID Tracking States Number",
-            alias: "Provides COVID details by states",
+            id: "COVIDTracking",
+            alias: "COVIDTracking numbers by state",
             columns: cols
         };
 
