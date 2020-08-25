@@ -168,8 +168,13 @@
             dataType: tableau.dataTypeEnum.string
         }, {
        
-            id: "totalTestsPeopleAntigen",
-			alias: "totalTestsPeopleAntigen",
+            id: "positiveTestsPeopleAntigen",
+			alias: "positiveTestsPeopleAntigen",
+            dataType: tableau.dataTypeEnum.string
+        }, {
+       
+            id: "totalTestsAntigen",
+			alias: "totalTestsAntigen",
             dataType: tableau.dataTypeEnum.string
         }, {
        
