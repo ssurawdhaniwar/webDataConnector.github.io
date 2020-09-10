@@ -14,47 +14,47 @@
 		}, {
             id: "positive",
             alias: "positive",
-            dataType: tableau.dataTypeEnum.string
+            dataType: tableau.dataTypeEnum.int
 		}, {
             id: "negative",
             alias: "negative",
-            dataType: tableau.dataTypeEnum.string
+            dataType: tableau.dataTypeEnum.int
         }, {
             id: "pending",
 			alias:"pending",
-            dataType: tableau.dataTypeEnum.string
+            dataType: tableau.dataTypeEnum.int
         }, {
             id: "hospitalizedCurrently",
 			alias: "hospitalizedCurrently",
-            dataType: tableau.dataTypeEnum.string
+            dataType: tableau.dataTypeEnum.int
         }, {
             id: "hospitalizedCumulative",
 			alias: "hospitalizedCumulative",
-            dataType: tableau.dataTypeEnum.string
+            dataType: tableau.dataTypeEnum.int
         }, {
             id: "inIcuCurrently",
 			alias: "inIcuCurrently",
-            dataType: tableau.dataTypeEnum.string
+            dataType: tableau.dataTypeEnum.int
 
         }, {
             id: "inIcuCumulative",
 			alias: "inIcuCumulative",
-            dataType: tableau.dataTypeEnum.string
+            dataType: tableau.dataTypeEnum.int
 	
         }, {
             id: "onVentilatorCurrently",
 			alias: "onVentilatorCurrently",
-            dataType: tableau.dataTypeEnum.string
+            dataType: tableau.dataTypeEnum.int
 
         }, {
             id: "onVentilatorCumulative",
 			alias: "onVentilatorCumulative",
-            dataType: tableau.dataTypeEnum.string
+            dataType: tableau.dataTypeEnum.int
 
         }, {
             id: "recovered",
 			alias: "recovered",
-            dataType: tableau.dataTypeEnum.string
+            dataType: tableau.dataTypeEnum.int
 
         }, {
             id: "dataQualityGrade",
@@ -79,12 +79,12 @@
         }, {
             id: "death",
 			alias: "death",
-            dataType: tableau.dataTypeEnum.string
+            dataType: tableau.dataTypeEnum.int
  
         }, {
             id: "hospitalized",
 			alias: "hospitalized",
-            dataType: tableau.dataTypeEnum.string
+            dataType: tableau.dataTypeEnum.int
   
         }, {
             id: "dateChecked",
@@ -94,136 +94,136 @@
         }, {
             id: "totalTestsViral",
 			alias: "totalTestsViral",
-            dataType: tableau.dataTypeEnum.string
+            dataType: tableau.dataTypeEnum.int
 
         }, {
             id: "positiveTestsViral",
 			alias: "positiveTestsViral",
-            dataType: tableau.dataTypeEnum.string
+            dataType: tableau.dataTypeEnum.int
        
         }, {
             id: "negativeTestsViral",
 			alias: "negativeTestsViral",
-            dataType: tableau.dataTypeEnum.string
+            dataType: tableau.dataTypeEnum.int
      
         }, {
             id: "positiveCasesViral",
 			alias: "positiveCasesViral",
-            dataType: tableau.dataTypeEnum.string
+            dataType: tableau.dataTypeEnum.int
     
         }, {
             id: "deathConfirmed",
 			alias: "deathConfirmed",
-            dataType: tableau.dataTypeEnum.string
+            dataType: tableau.dataTypeEnum.int
        
         }, {
             id: "deathProbable",
 			alias: "deathProbable",
-            dataType: tableau.dataTypeEnum.string
+            dataType: tableau.dataTypeEnum.int
       
         }, {
             id: "totalTestEncountersViral",
 			alias: "totalTestEncountersViral",
-            dataType: tableau.dataTypeEnum.string
+            dataType: tableau.dataTypeEnum.int
         }, {
       
             id: "totalTestsPeopleViral",
 			alias: "totalTestsPeopleViral",
-            dataType: tableau.dataTypeEnum.string
+            dataType: tableau.dataTypeEnum.int
         }, {
     
             id: "totalTestsAntibody",
 			alias: "totalTestsAntibody",
-            dataType: tableau.dataTypeEnum.string
+            dataType: tableau.dataTypeEnum.int
         }, {
        
             id: "positiveTestsAntibody",
 			alias: "positiveTestsAntibody",
-            dataType: tableau.dataTypeEnum.string
+            dataType: tableau.dataTypeEnum.int
         }, {
 
         
             id: "negativeTestsAntibody",
 			alias: "negativeTestsAntibody",
-            dataType: tableau.dataTypeEnum.string
+            dataType: tableau.dataTypeEnum.int
         }, {
      
             id: "totalTestsPeopleAntibody",
 			alias: "totalTestsPeopleAntibody",
-            dataType: tableau.dataTypeEnum.string
+            dataType: tableau.dataTypeEnum.int
         }, {
         
             id: "positiveTestsPeopleAntibody",
 			alias: "positiveTestsPeopleAntibody",
-            dataType: tableau.dataTypeEnum.string
+            dataType: tableau.dataTypeEnum.int
         }, {
         
             id: "negativeTestsPeopleAntibody",
 			alias: "negativeTestsPeopleAntibody",
-            dataType: tableau.dataTypeEnum.string
+            dataType: tableau.dataTypeEnum.int
         }, {
        
             id: "totalTestsPeopleAntigen",
 			alias: "totalTestsPeopleAntigen",
-            dataType: tableau.dataTypeEnum.string
+            dataType: tableau.dataTypeEnum.int
         }, {
        
             id: "positiveTestsPeopleAntigen",
 			alias: "positiveTestsPeopleAntigen",
-            dataType: tableau.dataTypeEnum.string
+            dataType: tableau.dataTypeEnum.int
         }, {
        
             id: "totalTestsAntigen",
 			alias: "totalTestsAntigen",
-            dataType: tableau.dataTypeEnum.string
+            dataType: tableau.dataTypeEnum.int
         }, {
        
             id: "positiveTestsAntigen",
 			alias: "positiveTestsAntigen",
-            dataType: tableau.dataTypeEnum.string
+            dataType: tableau.dataTypeEnum.int
         }, {
       
             id: "fips",
 			alias: "fips",
-            dataType: tableau.dataTypeEnum.string
+            dataType: tableau.dataTypeEnum.int
         }, {	
        
             id: "positiveIncrease",
 			alias: "positiveIncrease",
-            dataType: tableau.dataTypeEnum.string
+            dataType: tableau.dataTypeEnum.int
         }, {
             id: "negativeIncrease",
 			alias: "negativeIncrease",
-            dataType: tableau.dataTypeEnum.string
+            dataType: tableau.dataTypeEnum.int
         }, {
             id: "total",
 			alias: "total",
-            dataType: tableau.dataTypeEnum.string
+            dataType: tableau.dataTypeEnum.int
         }, {
  
             id: "totalTestResults",
 			alias: "totalTestResults",
-            dataType: tableau.dataTypeEnum.string
+            dataType: tableau.dataTypeEnum.int
         }, {
        
             id: "totalTestResultsIncrease",
 			alias: "totalTestResultsIncrease",
-            dataType: tableau.dataTypeEnum.string
+            dataType: tableau.dataTypeEnum.int
         }, {
       
             id: "posNeg",
 			alias: "posNeg",
-            dataType: tableau.dataTypeEnum.string
+            dataType: tableau.dataTypeEnum.int
         }, {
        
             id: "deathIncrease",
 			alias: "deathIncrease",
-            dataType: tableau.dataTypeEnum.string
+            dataType: tableau.dataTypeEnum.int
         }, {
         
             id: "hospitalizedIncrease",
 			alias: "hospitalizedIncrease",
-            dataType: tableau.dataTypeEnum.string
+            dataType: tableau.dataTypeEnum.int
         }, {
         
             id: "hash",
@@ -233,17 +233,17 @@
        
             id: "commercialScore",
 			alias: "commercialScore",
-            dataType: tableau.dataTypeEnum.string
+            dataType: tableau.dataTypeEnum.int
         }, {
         
             id: "negativeRegularScore",
 			alias: "negativeRegularScore",
-            dataType: tableau.dataTypeEnum.string
+            dataType: tableau.dataTypeEnum.int
         }, {
         
             id: "negativeScore",
 			alias: "negativeScore",
-            dataType: tableau.dataTypeEnum.string
+            dataType: tableau.dataTypeEnum.int
         }, {
       
             id: "positiveScore",
