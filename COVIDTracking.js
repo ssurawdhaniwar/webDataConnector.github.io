@@ -14,7 +14,7 @@
 		}, {
             id: "positive",
             alias: "positive",
-            dataType: tableau.dataTypeEnum.string
+            dataType: tableau.dataTypeEnum.number
 		}, {
             id: "negative",
             alias: "negative",
